@@ -1,0 +1,23 @@
+/* Custom Styling & Responsive Utilities */
+@layer components {
+    .skill-badge {
+        @apply px-3 py-1 text-xs font-mono rounded-md bg-charcoal border border-slate-700 text-slate-300 hover:border-teal-accent transition-colors;
+    }
+}
+
+/* Glassmorphism Dynamic Navbar Effect */
+.nav-scrolled {
+    background-color: rgba(18, 24, 36, 0.95);
+    border-bottom-color: rgba(51, 65, 85, 0.6) !important;
+    backdrop-filter: blur(8px);
+}
+
+/* Accessibility Handling for Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
